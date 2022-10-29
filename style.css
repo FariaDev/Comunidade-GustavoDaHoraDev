@@ -21,7 +21,7 @@ body {
 }
 
 .cabecalho-imagem {
-    height: 90px;
+    height: 85px;
 }
 
 .cabecalho-menu {
@@ -80,6 +80,39 @@ body {
     font-size: 24px;
     color: #161112;
     cursor: pointer;
+    position: relative;
+}
+
+.conteudo-principal-escrito-botao:after,
+.conteudo-principal-escrito-botao:before {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform .3s ease-in-out;
+}
+
+.conteudo-principal-escrito-botao:before {
+    border-left: 1px solid #161112;
+    border-right: 1px solid #161112;
+    transform: scaleY(0);
+}
+
+.conteudo-principal-escrito-botao:after {
+    border-top: 1px solid #161112;
+    border-bottom: 1px solid #161112;
+    transform: scaleX(0);
+}
+
+.conteudo-principal-escrito-botao:hover:before {
+    transform: scaleY(1);
+}
+
+.conteudo-principal-escrito-botao:hover:after {
+    transform: scaleX(1);
 }
 
 .conteudo-principal-imagem {
