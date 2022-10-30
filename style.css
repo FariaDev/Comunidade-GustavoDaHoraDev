@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+@font-face {
+    font-family: 'LettersforLearners';
+    src: url('landing\ page\ assets/Letters-for-Learners.ttf');
+}
 
 * {
     margin: 0;
@@ -9,7 +13,7 @@
   
 body {
     font-size: 100%;
-    background-image: linear-gradient(145deg, #4ca1af, #175a64, #0c424b, #0b3e46, #062e35);
+    background-color: #fbfbfd;
 }
 
 .cabecalho {
@@ -17,11 +21,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 24px;
+    padding: 1px;
+    background-color: rgba(0,0,0,0.8);
 }
 
 .cabecalho-imagem {
-    height: 80px;
+    height: 62px;
 }
 
 .cabecalho-menu {
@@ -31,9 +36,13 @@ body {
 
 .cabecalho-menu-item {
     font-family: 'Sarala', sans-serif;
-    color: #EAEAEA;
+    color: rgba(221, 221, 221, 0.87);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.cabecalho-menu-item:hover {
+    color: #f5f5f7;
 }
 
 .conteudo {
@@ -46,6 +55,10 @@ body {
     flex: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.conteudo-principal-imagem {
+    height: 430px;
 }
 
 .conteudo-principal-escrito {
@@ -65,7 +78,7 @@ body {
     font-family: 'Sarala', sans-serif;
     font-weight: 400;
     font-size: 24px;
-    color: #EAEAEA; /* #38b6ff */
+    color: #1d1d1f; /* #38b6ff */
 }
 
 .conteudo-principal-escrito-botao {
@@ -80,43 +93,10 @@ body {
     font-size: 24px;
     color: #161112;
     cursor: pointer;
-    position: relative;
 }
 
-.conteudo-principal-escrito-botao:after,
-.conteudo-principal-escrito-botao:before {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: transform .3s ease-in-out;
-}
-
-.conteudo-principal-escrito-botao:before {
-    border-left: 1px solid #161112;
-    border-right: 1px solid #161112;
-    transform: scaleY(0);
-}
-
-.conteudo-principal-escrito-botao:after {
-    border-top: 1px solid #161112;
-    border-bottom: 1px solid #161112;
-    transform: scaleX(0);
-}
-
-.conteudo-principal-escrito-botao:hover:before {
-    transform: scaleY(1);
-}
-
-.conteudo-principal-escrito-botao:hover:after {
-    transform: scaleX(1);
-}
-
-.conteudo-principal-imagem {
-    height: 430px;
+.conteudo-principal-escrito-botao:hover {
+    background-color: #f5f5f7;
 }
 
 .conteudo-secundario {
@@ -124,7 +104,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin-top: 48px;
+    margin-top: 200px;
 }
 
 .conteudo-secundario-titulo {
@@ -141,7 +121,7 @@ body {
     font-family: 'Sarala', sans-serif;
     font-weight: 400;
     font-size: 22px;
-    color: #EAEAEA;
+    color: #1d1d1f;
 }
 
 .rodape {
@@ -149,8 +129,9 @@ body {
     border-top: 0.4px solid #1d1617;
 }
 
-.rodape-imagem {
-    height: 120px;
-    display: block;
-    margin: 0 auto;
+.rodape-titulo {
+    font-family: 'LettersforLearners';
+    color: #f89d1a;
+    font-size: 70px;
+    text-align: center;
 }
